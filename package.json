@@ -1,9 +1,21 @@
 {
-    "name": "application-name"
-  , "version": "0.0.1"
-  , "private": true
-  , "dependencies": {
-      "express": "2.5.8"
-    , "jade": ">= 0.0.1"
+  "name": "ZombieTDD",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "2.5.8",
+    "jade": ">= 0.0.1",
+    "faye": "0.8.x"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "author": "",
+  "description": "jkarsruds take on magnars ZombieTDD",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jkarsrud/ZombieTDD.git"
   }
 }

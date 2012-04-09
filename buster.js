@@ -1,13 +1,23 @@
 var config = module.exports;
 
-config["Browser tests"] = {
-    env: "browser",
-    sources: [
-        "client_dependencies/*.js",
-        "lib/*.js",
-        "test/test_helpers.js"
+config['Server tests'] = {
+    env:'node',
+    tests:[
+        'test/shared/**/*_test.js'
+    ]
+};
+
+config['Browser tests'] = {
+    env:'browser',
+    libs:[
+        'client_dependencies/**/*.js'
     ],
-    tests: [
-        "test/*_test.js"
+    sources:[
+        'lib/shared/**/*.js',
+        'lib/client/**/*.js'
+    ],
+    tests:[
+        'test/shared/**/*_test.js',
+        'test/client/**/*_test.js'
     ]
 };
