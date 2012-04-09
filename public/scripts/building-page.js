@@ -6,7 +6,7 @@ ZOMBIE.blueprintController.create({
 }).init();
 
 ZOMBIE.buildingController.create({
-    model:{
+    building:{
         zombies:50,
         barricade:100,
         rooms:[

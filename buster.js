@@ -3,7 +3,7 @@ var config = module.exports;
 config['Server tests'] = {
     env:'node',
     tests:[
-        'test/shared/**/*_test.js'
+        'test/shared/**/*-test.js'
     ]
 };
 
@@ -17,7 +17,7 @@ config['Browser tests'] = {
         'lib/client/**/*.js'
     ],
     tests:[
-        'test/shared/**/*_test.js',
-        'test/client/**/*_test.js'
+        'test/shared/**/*-test.js',
+        'test/client/**/*-test.js'
     ]
 };
