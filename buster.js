@@ -9,15 +9,7 @@ config['Server tests'] = {
 
 config['Browser tests'] = {
     env:'browser',
-    libs:[
-        'client_dependencies/**/*.js'
-    ],
-    sources:[
-        'lib/shared/**/*.js',
-        'lib/client/**/*.js'
-    ],
-    tests:[
-        'test/shared/**/*-test.js',
-        'test/client/**/*-test.js'
-    ]
+    libs:[ 'client_dependencies/**/*.js' ],
+    sources:[ 'lib/shared/**/*.js', 'lib/client/**/*.js' ],
+    tests:[ 'test/shared/**/*-test.js', 'test/client/**/*-test.js' ]
 };

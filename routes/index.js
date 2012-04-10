@@ -9,7 +9,7 @@ exports.index = function (req, res) {
         title:'ZombieTDD',
         buildingHTML:renderBuilding({
             zombies: 50,
-            barricade: 100,
+            barricade: 98,
             rooms: [
                 {name: 'Trapdoor'}
             ],
