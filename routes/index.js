@@ -2,7 +2,7 @@
  * GET home page.
  */
 
-var renderBuilding = require('../lib/shared/building_renderer');
+var renderBuilding = require('../lib/shared/building-renderer');
 
 exports.index = function (req, res) {
     res.render('index', {

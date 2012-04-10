@@ -5,22 +5,28 @@ if (typeof require === 'function' && typeof module !== 'undefined') {
 
 (function (Z) {
     buster.testCase("BuildingController", {
-        "//should notify listeners when building changes":function () {
+        setUp: function() {
+            this.building = { buildRoom:this.stub()};
+            this.hub = { subscribe:this.stub() };
+            this.controller = Z.buildingController.create({
+                building:this.building,
+                hub: this.hub
+            });
+        },
+        "should notify listeners when building changes":function () {
+            var listener = this.stub();
+            this.controller.on('change', listener);
 
+            this.hub.subscribe.yields({name:"Flamethrower Surprise"});
+            this.controller.init();
+
+            assert.calledOnceWith(listener, this.building);
         },
         "should delegate events to building":function () {
-            var building = { buildRoom:this.stub()};
-            var hub = { subscribe:this.stub() };
+            this.hub.subscribe.yields({name:"Flamethrower Surprise"});
+            this.controller.init();
 
-            var controller = Z.buildingController.create({
-                building:building,
-                hub: hub
-            });
-
-            hub.subscribe.yields({name:"Flamethrower Surprise"});
-            controller.init();
-
-           assert.calledOnceWith(building.buildRoom, "Flamethrower Surprise");
+           assert.calledOnceWith(this.building.buildRoom, "Flamethrower Surprise");
         },
         "should render building on '/buildRoom' event":function () {
             var hub = { subscribe:this.stub() };
