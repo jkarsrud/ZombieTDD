@@ -8,7 +8,7 @@ if (typeof require === 'function' && typeof module !== 'undefined') {
         "//should notify listeners when building changes":function () {
 
         },
-        "//should delegate events to building":function () {
+        "should delegate events to building":function () {
             var building = { buildRoom:this.stub()};
             var hub = { subscribe:this.stub() };
 
