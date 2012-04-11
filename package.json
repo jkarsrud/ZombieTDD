@@ -7,7 +7,9 @@
     "jade": ">= 0.0.1",
     "faye": "0.8.x"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "when": "https://github.com/cujojs/when/tarball/1.0.4"
+  },
   "optionalDependencies": {},
   "engines": {
     "node": "*"
